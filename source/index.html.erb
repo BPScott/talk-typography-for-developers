@@ -1,0 +1,432 @@
+---
+title: Typography for developers
+author: Ben Scott
+theme: sky
+theme_highlight: zenburn
+---
+
+<section>
+  <h1>Typography</h1>
+  <h3>for Developers</h3>
+  <p>
+    <small>Ben Scott / <a href="http://twitter.com/BPScott">@BPScott</a></small>
+  </p>
+</section>
+
+
+<section>
+  <h2>Who?</h2>
+
+  <ul>
+    <li>Web Developer @ <a href="http://www.bbc.co.uk/programmes">bbc.co.uk/programmes</a></li>
+    <li>Not a natural visual designer</li>
+    <li>Trying not to use that as an excuse</li>
+  </ul>
+
+  <aside class="notes">
+    <p>
+      Last point is why I made this talk. Two months ago I didn't know any of
+      this, and I'm amazed at how simple it can be. Last week I caught myself
+      thinking "This margin would be better if it was 2px bigger" - that
+      wouldn't have happened two months ago.
+    </p>
+  </aside>
+</section>
+
+
+<section>
+  <div class="block-cite">
+    <figure>
+    <blockquote cite="http://ia.net/blog/the-web-is-all-about-typography-period">
+      95% of the information on the web is written language. It is only logical to say that a web designer should get good training in the main discipline of shaping written information, in other words: Typography.</blockquote>
+    <figcaption>&mdash; <a href="http://ia.net/blog/the-web-is-all-about-typography-period/">Oliver Reichenstein</a></figcaption>
+  </figure>
+  </div>
+
+  <aside class="notes">
+    <p>
+      Most information on the web is text, we should care about it making sense.
+    </p>
+  </aside>
+</section>
+
+
+<section>
+  <h2>Two Disciplines</h2>
+  <div class="grid">
+    <div class="grid__item one-half">
+      <h3>Creative Typography</h3>
+      <!-- Image of creative/ dynamic typography -->
+    </div>
+
+    <div class="grid__item one-half">
+      <h3>Technical Typography</h3>
+      <!-- Image of rulers and guides -->
+    </div>
+  </div>
+
+  <aside class="notes">
+    <p>This are very broad classifications!</p>
+
+    <p>
+      Creative Typography is the typographic design of a particular project.
+      What font(s) you should use, what sort of mood do you want to create
+      (formal vs. fun, calm vs. excitable). You wouldn't use the same font on a
+      kids birthday invite as a formal letter.
+    </p>
+
+    <p>
+      Technical typography is the universal rules that apply no matter the
+      project. Because they're standard anybody can utilise them. This is what
+      this talk shall be focusing on.
+    </p>
+  </aside>
+</section>
+
+
+<section>
+  <h2>Technical Typography</h2>
+
+  <div class="grid">
+    <div class="grid__item one-half">
+      <h3>Rhythm</h3>
+
+    </div>
+
+    <div class="grid__item one-half">
+      <h3>Ratios</h3>
+
+    </div>
+  </div>
+</section>
+
+<!--
+<section>
+  <h2>Spacing</h2>
+  <ul>
+    <li>Of a single line</li>
+    <li>Between paragraphs</li>
+    <li>Line length</li>
+  </ul>
+
+  <aside class="notes">
+    <ul>
+      <li>Line height is best expressed as a ratio of the font-size. The ideal
+        line height depends on the font used, between 1.2 and 1.8 is common.</li>
+      <li></li>
+      <li>Line length should be small enough that the reader doesn't have to
+        move their head when reading - traditionally 45-75 characters per line,
+        but research shows that longer lines are just as readable on screen.</li>
+    </ul>
+  </aside>
+</section>
+-->
+
+<section>
+  <h2>Vertical Rhythm</h2>
+  <div class="rhythm-demo">
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+    est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur.</p>
+
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+    deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
+    adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.</p>
+  </div>
+</section>
+
+
+<section>
+  <h2>Ratios</h2>
+
+  <h3>Ratios</h3>
+  <h4>Ratios</h4>
+</section>
+
+<section>
+  <h2>Modular Scale</h2>
+
+  <p>Base font-size: 16px. Ratio: 1:1.5</p>
+  <table>
+    <tr><th>Size</th><th>Calculated By</th></tr>
+    <tr><td>7.111px</td><td>10.667px / 1.5</td></tr>
+    <tr><td>10.667px</td><td>16px / 1.5</td></tr>
+    <tr><td>16px</td><td>-</td></tr>
+    <tr><td>24px</td><td>16px * 1.5</td></tr>
+    <tr><td>36px</td><td>24px * 1.5</td></tr>
+    <tr><td>54px</td><td>36px * 1.5</td></tr>
+  </table>
+
+  <aside class="notes">
+    <p>Modular Scale is a method for generating a harmonious scale of numbers that work
+well together, based off a common ratio and a starting point.</p>
+  </aside>
+</section>
+
+<section>
+  <h2>Modular Scale</h2>
+
+  <p>Base font-size: 16px. Ratio: 1:1.5</p>
+  <table>
+    <tr><th>Size</th><th>Calculated By</th></tr>
+    <tr><td>7.111px</td><td>16px * (1.5 ^ -2)</td></tr>
+    <tr><td>10.667px</td><td>16px * (1.5 ^ -1)</td></tr>
+    <tr><td>16px</td><td>16px * (1.5 ^ 0)</td></tr>
+    <tr><td>24px</td><td>16px * (1.5 ^ 1)</td></tr>
+    <tr><td>36px</td><td>16px * (1.5 ^ 2)</td></tr>
+    <tr><td>54px</td><td>16px * (1.5 ^ 3)</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Bringing it all together</h2>
+
+  <p><a href="http://www.gridlover.net/">GridLover.net</a></p>
+</section>
+
+
+<section>
+  <h2>Sassy Default Variables</h2>
+  <pre><code>
+    $base-font-size: 16px !default;
+    $base-line-height: 1.5 !default;
+    $ratio: 1.5 !default; // Perfect Fifth
+    $round-pixels: true !default;
+  </code></pre>
+</section>
+
+<section>
+  <h2>Sassy Vertical Rhythm</h2>
+  <pre><code>
+@function rhythm($multiplier: 1,
+                 $base-font-size: $base-font-size,
+                 $base-line-height: $base-line-height) {
+  @return $multiplier * $base-font-size * $base-line-height;
+}
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>Sassy Modular Scale</h2>
+
+  <pre><code>
+  @function modular-scale($offset,
+                          $base-font-size: $base-font-size,
+                          $ratio: $ratio,
+                          $round-pixels: $round-pixels) {
+  @if $round-pixels == true {
+    @return round($base-font-size * pow($ratio, $offset));
+  }
+
+  @return $base-font-size * pow($ratio, $offset);
+}
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>Sassy Basic Usage</h2>
+
+  <pre><code>
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  text-rendering: optimizeLegibility;
+}
+
+p, ul, ol {
+  margin: 0 0 rhythm(1) 0;
+}
+
+ul, ol {
+  padding-left: $base-font-size * 2.5;
+}
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>Sassy Headings</h2>
+  <pre><code>
+h1 {
+  font-size: modular-scale(3);
+  line-height: (rhythm(3) / modular-scale(3));
+}
+
+h2 {
+  font-size: modular-scale(2);
+  line-height: (rhythm(2) / modular-scale(2));
+}
+
+h3 {
+  font-size: modular-scale(1);
+  line-height: (rhythm(2) / modular-scale(1));
+}
+  </code></pre>
+
+  <aside class="notes">
+    <p>
+      Reduced mental load as no maths is needed, just use rhythm multiples and
+      modular-scale points.
+    </p>
+  </aside>
+</section>
+
+<section>
+  <h2>Sassy Headings</h2>
+  <pre><code>
+h1 {
+  font-size: 54px;
+  line-height: 1.33333;
+}
+
+
+h2 {
+  font-size: 36px;
+  line-height: 1.33333;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 2;
+}
+  </code></pre>
+
+  <aside class="notes">
+    <p>
+      Reduced mental load as no maths is needed, just use rhythm multiples and
+      modular-scale points.
+    </p>
+  </aside>
+</section>
+
+<section>
+  <h2>Rems</h2>
+
+  <ul>
+    <li>Relative measurements</li>
+    <li>A better fit for responsive thinking</li>
+    <li>Progressive enhancement</li>
+  </ul>
+
+  <pre><code>
+html {
+  font-size: 16px;
+  font-size: 1rem;
+}
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>Sassy REMs</h2>
+  <pre><code>
+@mixin rem($property, $px-values, $baseline-px: $base-font-size) {
+  $baseline-rem: $baseline-px / 1rem;
+  $rem-values: ();
+
+  @each $value in $px-values {
+    $rem-values: append($rem-values,
+      if($value == 0, $value, $value / $baseline-rem));
+  }
+
+  #{$property}: $px-values;
+  #{$property}: $rem-values;
+}
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>Sassy Headings (Redux)</h2>
+
+  <pre><code>
+h1 {
+  @include rem('font-size', modular-scale(3));
+  line-height: (rhythm(3) / modular-scale(3));
+}
+
+h2 {
+  @include rem('font-size', modular-scale(2));
+  line-height: (rhythm(2) / modular-scale(2));
+}
+
+h3 {
+  @include rem('font-size', modular-scale(1));
+  line-height: (rhythm(2) / modular-scale(1));
+}
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>Sassy Headings (Redux)</h2>
+
+  <pre><code>
+h1 {
+  font-size: 54px;
+  font-size: 3.375rem;
+  line-height: 1.33333;
+}
+
+h2 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333;
+}
+
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>TL;DR</h2>
+
+  <ul>
+    <li>Universal guidelines exist</li>
+    <li>They're pretty easy to use</li>
+    <li>Computers are good at math</li>
+    <li>A designer's eye always wins</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Link Dump</h2>
+  <ul>
+    <li><a href="http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/#tt-ellipses">Technical Web Typography: Guidelines and Techniques</a></li>
+    <li><a href="http://alistapart.com/article/more-meaningful-typography">More Meaningful Typography</a></li>
+    <li><a href="http://ia.net/blog/the-web-is-all-about-typography-period/">Web Design is 95% Typography</a></li>
+    <li><a href="http://www.kaikkonendesign.fi/typography/section/1">Interactive Guide to Blog Typography</a></li>
+    <li><a href="http://www.gridlover.net/">Grid Lover</a></li>
+  </ul>
+</section>
+
+
+<section>
+  <h1>Thank You</h1>
+
+  <h3>Any Questions?</h3>
+  <p>
+    <small>Ben Scott / <a href="http://twitter.com/BPScott">@BPScott</a></small>
+  </p>
+
+    <p>
+    <small><a href="http://www.reload.me.uk/talk-typography-for-developers">reload.me.uk/talk-typography-for-developers</a></small>
+  </p>
+
+  <!-- TODO link to talk URL here-->
+</section>

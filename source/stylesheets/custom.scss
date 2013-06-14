@@ -1,0 +1,63 @@
+$grid-gutter: 16px;
+
+body { background-image: none; }
+
+.reveal {
+  .grid {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      margin-left: -$grid-gutter;
+  }
+
+  .grid__item {
+    display: block;
+    float: left;
+    padding-left: $grid-gutter;
+    vertical-align: top;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+
+  .one-whole  { width: 100%; }
+
+  .one-half   { width: 50%; }
+
+  .one-third  { width: 33.333%; }
+  .two-thirds { width: 66.666%; }
+
+
+  table { margin: 0 auto; }
+  th { font-weight: bold; }
+
+  blockquote {
+    border: none;
+    box-shadow: none;
+    text-align: left;
+  }
+
+  blockquote + figcaption {
+    width: 80%;
+    margin: 20px auto;
+    text-align: left;
+  }
+
+  pre code {
+    max-height: 500px;
+  }
+
+  .rhythm-demo {
+    font-size: 20px;
+    line-height: 1.5;
+    width: 64%;
+    margin: 0 auto;
+    text-align: left;
+
+    p {
+      margin-bottom: 24px;
+    }
+  }
+}

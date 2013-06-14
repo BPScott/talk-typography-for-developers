@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= data.page.title || "" %></title>
+
+    <%= stylesheet_link_tag "demo-rems", "all" %>
+    <style>
+      html { color: #333; background-color: #f2f2f2; }
+      .container { width: 50em; margin: 0 auto; }
+      h1,h2,h3,h4,h5,h6 {color: #222; }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
