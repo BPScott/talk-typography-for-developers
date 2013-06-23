@@ -125,20 +125,34 @@ theme_highlight: zenburn
 <section>
   <h2>Vertical Rhythm</h2>
   <div class="rhythm-demo">
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-    est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur.</p>
+    <div class="grid">
+      <div class="grid__item one-half">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
 
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p>Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+        est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur.</p>
 
-    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-    deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
-    adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua.</p>
+
+<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+      </div>
+      <div class="grid__item one-half">
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <h4>Dummy Text</h4>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua.</p>
+
+      </div>
+    </div>
   </div>
 </section>
 
@@ -184,6 +198,20 @@ well together, based off a common ratio and a starting point.</p>
     <tr><td>54px</td><td>16px * (1.5 ^ 3)</td></tr>
   </table>
 </section>
+
+<section>
+  <h2>Modular Scale</h2>
+ <div class="ms-demo">
+    <p class="ms-n2">7.111px - 16px * (1.5 ^ -2)</p>
+    <p class="ms-n1">10.667px - 16px * (1.5 ^ -1)</p>
+    <p class="ms-0">16px - 16px * (1.5 ^ 0)</p>
+    <p class="ms-1">24px - 16px * (1.5 ^ 1)</p>
+    <p class="ms-2">36px - 16px * (1.5 ^ 2)</p>
+    <p class="ms-3">54px - 16px * (1.5 ^ 3)</p>
+    <p class="ms-4">81px - 16px * (1.5 ^ 4)</p>
+  </div>
+</section>
+
 
 <section>
   <h2>Bringing it all together</h2>
