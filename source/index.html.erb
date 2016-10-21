@@ -26,10 +26,15 @@ transition: linear
 
   <aside class="notes">
     <p>
-      Last point is why I made this talk. Two months ago I didn't know any of
-      this, and I'm amazed at how simple it can be. Last week I caught myself
+      This talk is actually a few years old and when I was looking through my notes I found the line:
+    <br>
+      Last week I caught myself
       thinking "This margin would be better if it was 2px bigger" - that
       wouldn't have happened two months ago.
+    <br>
+      So it's nice to see some progression there. I'm still not a visual designer. Give me a blank canvas and I still go "uuuuh". But give me an existing design and I might be able to offer some suggestions on things that look odd, why they look odd and how to change it so it looks better.
+    <br>
+      Today I'm going to talk about a few basic properties of typography, and how you can string some of them together to create a building point that you can tinker with rather than being overwhelmed by staring at blank screens.
     </p>
   </aside>
 </section>
@@ -46,7 +51,7 @@ transition: linear
 
   <aside class="notes">
     <p>
-      Most information on the web is text, we should care about it making sense.
+      Most information on the web is text (well apart from all those ad images and JS); we should care about it making sense. We should care about it being readable and understandable. Nobody should have to expend excessive effort to consume information.
     </p>
   </aside>
 </section>
@@ -67,13 +72,16 @@ transition: linear
   </div>
 
   <aside class="notes">
-    <p>This are very broad classifications!</p>
+    <p>Typography is split into these two very broad classifications!</p>
 
     <p>
       Creative Typography is the typographic design of a particular project.
       What font(s) you should use, what sort of mood do you want to create
-      (formal vs. fun, calm vs. excitable). You wouldn't use the same font on a
-      kids birthday invite as a formal letter.
+      (formal vs. fun, calm vs. excitable).
+      You wouldn't use Comic Sans for a job cover letter in the same way you would'nt use Times New Roman for your
+      8 year old's birthday party invite.
+    <br>
+      This is all opinionated design - what shall work best will depend on the type of project you're working on.
     </p>
 
     <p>
@@ -91,24 +99,51 @@ transition: linear
   <div class="grid">
     <div class="grid__item one-half">
       <h3>Rhythm</h3>
-
     </div>
 
     <div class="grid__item one-half">
       <h3>Ratios</h3>
-
     </div>
   </div>
+
+  <aside class="notes">
+    <p>
+      Two sections of technical typography I want to talk about today are Rhythm and Ratios.
+    </p>
+  </aside>
+</section>
+
+<section>
+  <h2>CSS</h2>
+
+  <pre><code>
+    body {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    p {
+      margin-bottom: 24px;
+    }
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>Rhythm</h2>
+  <%= partial('rhythm-demo') %>
+
+  <aside class="notes">
+    <p>
+      Vertical Rhythm is the spacing as text flows down the page. It comes in three components:
+      the line-height of a single line
+    </p>
+  </aside>
 </section>
 
 <!--
 <section>
-  <h2>Spacing</h2>
-  <ul>
-    <li>Of a single line</li>
-    <li>Between paragraphs</li>
-    <li>Line length</li>
-  </ul>
+  <h2>Horizontal Rhythm</h2>
 
   <aside class="notes">
     <ul>
@@ -120,43 +155,7 @@ transition: linear
         but research shows that longer lines are just as readable on screen.</li>
     </ul>
   </aside>
-</section>
--->
-
-<section>
-  <h2>Vertical Rhythm</h2>
-  <div class="rhythm-demo">
-    <div class="grid">
-      <div class="grid__item one-half">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-        <p>Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-        est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur.</p>
-
-
-<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-      </div>
-      <div class="grid__item one-half">
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <h4>Dummy Text</h4>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua.</p>
-
-      </div>
-    </div>
-  </div>
-</section>
-
+</section> -->
 
 <section>
   <h2>Ratios</h2>
