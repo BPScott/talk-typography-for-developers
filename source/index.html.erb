@@ -25,16 +25,13 @@ transition: linear
   </ul>
 
   <aside class="notes">
-    <p>
-      This talk is actually a few years old and when I was looking through my notes I found the line:
+
     <br>
-      Last week I caught myself
-      thinking "This margin would be better if it was 2px bigger" - that
-      wouldn't have happened two months ago.
+      Not a visual designer. I can look at an existing design and make offer tweaks and suggestion
+      <br>
+      Give me a blank canvas and I still go "uuuuh".
     <br>
-      So it's nice to see some progression there. I'm still not a visual designer. Give me a blank canvas and I still go "uuuuh". But give me an existing design and I might be able to offer some suggestions on things that look odd, why they look odd and how to change it so it looks better.
-    <br>
-      Today I'm going to talk about a few basic properties of typography, and how you can string some of them together to create a building point that you can tinker with rather than being overwhelmed by staring at blank screens.
+      Today I'm going to talk about a few basic properties of typography, and how you can string some of them together to create a building point that you can tinker with rather than being overwhelmed by staring at a blank canvas.
     </p>
   </aside>
 </section>
@@ -78,8 +75,7 @@ transition: linear
       Creative Typography is the typographic design of a particular project.
       What font(s) you should use, what sort of mood do you want to create
       (formal vs. fun, calm vs. excitable).
-      You wouldn't use Comic Sans for a job cover letter in the same way you would'nt use Times New Roman for your
-      8 year old's birthday party invite.
+      You wouldn't use Comic Sans for a job cover letter in the same way you wouldn't use Times New Roman for your 8 year old's birthday party invite.
     <br>
       This is all opinionated design - what shall work best will depend on the type of project you're working on.
     </p>
@@ -88,6 +84,36 @@ transition: linear
       Technical typography is the universal rules that apply no matter the
       project. Because they're standard anybody can utilise them. This is what
       this talk shall be focusing on.
+    <br>
+      But first I want to do a quick reminder on CSS properties we'll be utilising
+    </p>
+  </aside>
+</section>
+
+
+<section>
+  <h2>CSS</h2>
+
+  <pre><code>
+    body {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    p {
+      margin-bottom: 24px;
+    }
+  </code></pre>
+
+  <aside class="notes">
+    <p>
+      Font-size specifies the size of your font, you could specify this in ems or rems, but today lets keep it straight forward and deal with pixels as they're a bit easier to think about.
+    <br>
+      Line-height specifies the height of a single line of text. You can specify this in any CSS measurement like pixels, ems or rems, but I prefer the unitless notation where it's just a number. This is because the number is a ratio based on the current font-size. So in this example the line-height equates to 16px * 1.5 which is 24px.
+    <br>
+      Margin-bottom provides your spacing between elements, if you've got continuous blocks of text then you'll want your spacing between paragraphs to be equal to your line height so you give the impression of a singe line break.
+    <br>
+      Note that font-size and line-height are inherited properties, meaning that these values shall also be applied to any child elements underneath the selector you set these properties on. Whereas margin-bottom does not inherit it will only be applied to the selector you specified.
     </p>
   </aside>
 </section>
@@ -113,21 +139,6 @@ transition: linear
   </aside>
 </section>
 
-<section>
-  <h2>CSS</h2>
-
-  <pre><code>
-    body {
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    p {
-      margin-bottom: 24px;
-    }
-  </code></pre>
-</section>
-
 
 <section>
   <h2>Rhythm</h2>
@@ -135,33 +146,48 @@ transition: linear
 
   <aside class="notes">
     <p>
-      Vertical Rhythm is the spacing as text flows down the page. It comes in three components:
-      the line-height of a single line
+      Vertical Rhythm is the spacing as text flows down the page. At its base level it is how the line-height of your text repeats and create a familiar flow that feels comforting to the reader. Through careful use of spacing you can also set this up so that headings and other content that breaks up your continuous prose can fit into this rhythm without breaking it. Note how this heading appears in the middle of a block of prose but any paragraphs after it fall back into the same rhythm.
+    <br>
+      There is an ideal width to your text too. Ideally your the readers head and eyes shouldn't need to move while read, that effort while slight is repeated several times while reading and should be avoided if possible so the reader doesn't tire. The common wisdom for traditional books is to have a line be between 45 and 75 characters long, though research has shown that longer lines are just a readable on screen, probably due to how the distance between your eyes and a desktop monitor differs compared to a book or handheld electronic device.
     </p>
   </aside>
 </section>
 
-<!--
+
 <section>
-  <h2>Horizontal Rhythm</h2>
+  <h2>Line-Height</h2>
+
+  <ul>
+    <li>Usually between 1.2 and 1.8</li>
+    <li>Larger text needs a smaller line-height</li>
+    <li>Larger x-height needs a larger line-height</li>
+  </ul>
 
   <aside class="notes">
-    <ul>
-      <li>Line height is best expressed as a ratio of the font-size. The ideal
-        line height depends on the font used, between 1.2 and 1.8 is common.</li>
-      <li></li>
-      <li>Line length should be small enough that the reader doesn't have to
-        move their head when reading - traditionally 45-75 characters per line,
-        but research shows that longer lines are just as readable on screen.</li>
-    </ul>
+    <p>
+      So I've hinted that your line-height is the base value that all your other settings shall hang off of, so what should you set your line-height to? Well it depends. Setting it to 1 isn't appropriate as then the height of a line is equal to the size of characters in it so your text lines shall butt into the lines above and below, thus you need a bit of spacing. Values between 1.2 and 1.8 are common but this shall depend on a few things.
+    <br>
+      The size of your font is a factor - a larger font-size means you want your line-height ratio
+      to be a bit tighter, while you'll smaller text shall need a larger line-height to breath.
+    <br>
+      Also it depends on the font you've chosen too. Different fonts have different x-heights - the size of their lower case letters in relation to their upper case ones. Fonts that have a larger x-height feel larger overall so you'll need a larger line-height to give the letters room to breath and not feel cramped.
+    <br>
+      So that's a little bit around what to consider when picking that value, but your typography isn't just about one font size, you've got all those heading sizes to consider.
+    </p>
   </aside>
-</section> -->
+</section>
 
 <section>
   <h2>Ratios</h2>
 
   <h3>Ratios</h3>
   <h4>Ratios</h4>
+
+  <aside class="notes">
+    <p>
+      Rather than struggling to pick out sizes for your sizing hierarchy you can cheat a little, and short-circuit that process by leveraging ratios, where each step in your sizing is a multiple of the prior value
+    </p>
+  </aside>
 </section>
 
 <section>
@@ -179,8 +205,13 @@ transition: linear
   </table>
 
   <aside class="notes">
-    <p>Modular Scale is a method for generating a harmonious scale of numbers that work
-well together, based off a common ratio and a starting point.</p>
+    <p>
+      Modular Scale is a method for generating a harmonious scale of numbers that work well together, based off a common ratio and a starting point
+    <br>
+      For instance if we pick a ratio of 1:1.5 then we end up with a sizing hierarchy that looks like this, where each size is given by the prior value multiplied by your ratio.
+    <br>
+      There is another way of expressing this trend though:
+    </p>
   </aside>
 </section>
 
@@ -197,6 +228,12 @@ well together, based off a common ratio and a starting point.</p>
     <tr><td>36px</td><td>16px * (1.5 ^ 2)</td></tr>
     <tr><td>54px</td><td>16px * (1.5 ^ 3)</td></tr>
   </table>
+
+  <aside class="notes">
+    <p>
+      Using exponents gives us a slightly cleaner progression, your base size is 0 then the number of your step is the exponent that you raise your ratio to.
+    </p>
+  </aside>
 </section>
 
 <section>
@@ -216,7 +253,25 @@ well together, based off a common ratio and a starting point.</p>
 <section>
   <h2>Bringing it all together</h2>
 
-  <p><a href="http://www.gridlover.net/">GridLover.net</a></p>
+  <p><a href="http://www.gridlover.net/try">GridLover.net</a></p>
+
+  <aside class="notes">
+    <p>This all works rather well, but it's a fair bit of maths. If only we had something to do all that computation for us. Oh wait, we do.</p>
+  </aside>
+</section>
+
+<section>
+  <h2>Sass</h2>
+
+  <aside class="notes">
+    <p>
+      Sass is a stylesheet preprocessor, it takes code written in its on language and outputs CSS
+    <br>
+      The neat thing about it is it's a strict superset of CSS. Which means that you can write the CSS you already know, and sprinkle in it's features like variables and functions when you need them.
+    <br>
+      You're not starting from scratch.
+    </p>
+  </aside>
 </section>
 
 
@@ -228,6 +283,14 @@ well together, based off a common ratio and a starting point.</p>
     $ratio: 1.5 !default; // Perfect Fifth
     $round-pixels: true !default;
   </code></pre>
+
+  <aside class="notes">
+    <p>
+      First let's setup some default variables that we'll be using.
+    <br>
+    A base font-size, line-height and a ratio we want
+    </p>
+  </aside>
 </section>
 
 <section>
@@ -239,6 +302,17 @@ well together, based off a common ratio and a starting point.</p>
   @return $multiplier * $base-font-size * $base-line-height;
 }
   </code></pre>
+
+  <aside class="notes">
+    <p>
+      Next we'll define a function we can can use for working out a multiple of our vertical rhythm for when we want to space things out.
+    <br>
+      The duplication of the font-size and line-height are so it knows to reference the global
+      variables we just set as the default values for those parameters.
+    <br>
+      So if i need a space that is equal to two lines of text i can get that using rhythm(2)
+    </p>
+  </aside>
 </section>
 
 
@@ -257,6 +331,16 @@ well together, based off a common ratio and a starting point.</p>
   @return $base-font-size * pow($ratio, $offset);
 }
   </code></pre>
+
+  <aside class="notes">
+    <p>
+      And finally we can create a modular-scale function that can be used to get a font size in our scale.
+    <br>
+      modular-scale(0) shall be our base font-size, modular-scale(1) shall be our next size up and so on.
+    <br>
+      Let's put our variables and functions to use.
+    </p>
+  </aside>
 </section>
 
 
@@ -286,18 +370,18 @@ ul, ol {
   <h2>Sassy Headings</h2>
   <pre><code>
 h1 {
-  font-size: modular-scale(3);
-  line-height: (rhythm(3) / modular-scale(3));
+  font-size: modular-scale(3); // 16px * 1.5^3 = 54px
+  line-height: (rhythm(3) / modular-scale(3)); // 72px / 54px = 1.33
 }
 
 h2 {
-  font-size: modular-scale(2);
-  line-height: (rhythm(2) / modular-scale(2));
+  font-size: modular-scale(2); // 16px * 1.5^2 = 36px
+  line-height: (rhythm(2) / modular-scale(2)); // 48px / 36px =1.33
 }
 
 h3 {
-  font-size: modular-scale(1);
-  line-height: (rhythm(2) / modular-scale(1));
+  font-size: modular-scale(1); // 16px * 1.5^1 = 24px
+  line-height: (rhythm(2) / modular-scale(1)); // 48px / 24px = 2
 }
   </code></pre>
 

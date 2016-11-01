@@ -60,6 +60,11 @@ body { background-image: none; }
     text-align: left;
   }
 
+  pre {
+    font-size: 0.6em;
+    width: 95%;
+  }
+
   pre code {
     max-height: 500px;
   }
