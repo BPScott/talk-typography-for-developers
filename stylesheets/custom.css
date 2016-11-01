@@ -1,0 +1,104 @@
+/* line 7, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+body {
+  background-image: none; }
+
+/* line 10, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -48px; }
+  /* line 17, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+  .reveal .grid:before, .reveal .grid:after {
+    content: " ";
+    display: table; }
+  /* line 22, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+  .reveal .grid:after {
+    clear: both; }
+/* line 27, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .grid__item {
+  display: block;
+  float: left;
+  padding-left: 48px;
+  vertical-align: top;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+/* line 39, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .one-whole {
+  width: 100%; }
+/* line 41, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .one-half {
+  width: 50%; }
+/* line 43, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .one-third {
+  width: 33.333%; }
+/* line 44, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .two-thirds {
+  width: 66.666%; }
+/* line 47, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal table {
+  margin: 0 auto; }
+/* line 48, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal th {
+  font-weight: bold; }
+/* line 49, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal th, .reveal td {
+  padding: 0 64px; }
+/* line 51, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal blockquote {
+  border: none;
+  box-shadow: none;
+  text-align: left; }
+/* line 57, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal blockquote + figcaption {
+  width: 80%;
+  margin: 20px auto;
+  text-align: left; }
+/* line 63, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal pre {
+  font-size: 0.6em;
+  width: 95%; }
+/* line 68, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal pre code {
+  max-height: 500px; }
+/* line 72, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .rhythm-demo {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0 auto;
+  text-align: left;
+  background: url("../images/30px-vert.png") top left repeat; }
+  /* line 82, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+  .reveal .rhythm-demo p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 30px; }
+  /* line 88, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+  .reveal .rhythm-demo h4 {
+    font-size: 36px;
+    line-height: 60px;
+    margin-bottom: 0; }
+/* line 97, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .ms-demo .ms-4 {
+  font-size: 81px; }
+/* line 98, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .ms-demo .ms-3 {
+  font-size: 54px; }
+/* line 99, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .ms-demo .ms-2 {
+  font-size: 36px; }
+/* line 100, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .ms-demo .ms-1 {
+  font-size: 24px; }
+/* line 101, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .ms-demo .ms-0 {
+  font-size: 16px; }
+/* line 102, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .ms-demo .ms-n1 {
+  font-size: 10px; }
+/* line 103, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/custom.scss */
+.reveal .ms-demo .ms-n2 {
+  font-size: 7px; }

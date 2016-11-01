@@ -1,0 +1,35 @@
+/* line 38, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/demo-rems.css.scss */
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility; }
+
+/* line 46, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/demo-rems.css.scss */
+p, ul, ol {
+  margin: 0 0 24px 0;
+  margin: 0 0 1.5rem 0; }
+
+/* line 51, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/demo-rems.css.scss */
+ul, ol {
+  padding-left: 40px;
+  padding-left: 2.5rem; }
+
+/* line 57, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/demo-rems.css.scss */
+h1 {
+  font-size: 54px;
+  font-size: 3.375rem;
+  line-height: 1.33333; }
+
+/* line 63, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/demo-rems.css.scss */
+h2 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333; }
+
+/* line 69, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/demo-rems.css.scss */
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 2; }

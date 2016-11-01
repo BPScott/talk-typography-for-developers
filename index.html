@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Typography for developers</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Ben Scott">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="reveal/css/reveal.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="reveal/css/theme/sky.css" id="theme" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/custom.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <!-- For syntax highlighting -->
+    <link href="reveal/css/highlight/zenburn.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="reveal/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+  <h1>Typography</h1>
+  <h3>for Developers</h3>
+  <p>
+    <small>Ben Scott / <a href="http://twitter.com/BPScott">@BPScott</a></small>
+  </p>
+</section>
+
+
+<section>
+  <h2>Who?</h2>
+
+  <ul>
+    <li>Web Developer @ <a href="http://www.bbc.co.uk/programmes">bbc.co.uk/programmes</a></li>
+    <li>Not a natural visual designer</li>
+    <li>Trying not to use that as an excuse</li>
+  </ul>
+
+  <aside class="notes">
+
+    <br>
+      Not a visual designer. I can look at an existing design and make offer tweaks and suggestion
+      <br>
+      Give me a blank canvas and I still go "uuuuh".
+    <br>
+      Today I'm going to talk about a few basic properties of typography, and how you can string some of them together to create a building point that you can tinker with rather than being overwhelmed by staring at a blank canvas.
+    </p>
+  </aside>
+</section>
+
+
+<section>
+  <div class="block-cite">
+    <figure>
+    <blockquote cite="http://ia.net/blog/the-web-is-all-about-typography-period">
+      95% of the information on the web is written language. It is only logical to say that a web designer should get good training in the main discipline of shaping written information, in other words: Typography.</blockquote>
+    <figcaption>&mdash; <a href="http://ia.net/blog/the-web-is-all-about-typography-period/">Oliver Reichenstein</a></figcaption>
+  </figure>
+  </div>
+
+  <aside class="notes">
+    <p>
+      Most information on the web is text (well apart from all those ad images and JS); we should care about it making sense. We should care about it being readable and understandable. Nobody should have to expend excessive effort to consume information.
+    </p>
+  </aside>
+</section>
+
+
+<section>
+  <h2>Two Disciplines</h2>
+  <div class="grid">
+    <div class="grid__item one-half">
+      <h3>Creative Typography</h3>
+      <!-- Image of creative/ dynamic typography -->
+    </div>
+
+    <div class="grid__item one-half">
+      <h3>Technical Typography</h3>
+      <!-- Image of rulers and guides -->
+    </div>
+  </div>
+
+  <aside class="notes">
+    <p>Typography is split into these two very broad classifications!</p>
+
+    <p>
+      Creative Typography is the typographic design of a particular project.
+      What font(s) you should use, what sort of mood do you want to create
+      (formal vs. fun, calm vs. excitable).
+      You wouldn't use Comic Sans for a job cover letter in the same way you wouldn't use Times New Roman for your 8 year old's birthday party invite.
+    <br>
+      This is all opinionated design - what shall work best will depend on the type of project you're working on.
+    </p>
+
+    <p>
+      Technical typography is the universal rules that apply no matter the
+      project. Because they're standard anybody can utilise them. This is what
+      this talk shall be focusing on.
+    <br>
+      But first I want to do a quick reminder on CSS properties we'll be utilising
+    </p>
+  </aside>
+</section>
+
+
+<section>
+  <h2>CSS</h2>
+
+  <pre><code>
+    body {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    p {
+      margin-bottom: 24px;
+    }
+  </code></pre>
+
+  <aside class="notes">
+    <p>
+      Font-size specifies the size of your font, you could specify this in ems or rems, but today lets keep it straight forward and deal with pixels as they're a bit easier to think about.
+    <br>
+      Line-height specifies the height of a single line of text. You can specify this in any CSS measurement like pixels, ems or rems, but I prefer the unitless notation where it's just a number. This is because the number is a ratio based on the current font-size. So in this example the line-height equates to 16px * 1.5 which is 24px.
+    <br>
+      Margin-bottom provides your spacing between elements, if you've got continuous blocks of text then you'll want your spacing between paragraphs to be equal to your line height so you give the impression of a singe line break.
+    <br>
+      Note that font-size and line-height are inherited properties, meaning that these values shall also be applied to any child elements underneath the selector you set these properties on. Whereas margin-bottom does not inherit it will only be applied to the selector you specified.
+    </p>
+  </aside>
+</section>
+
+
+<section>
+  <h2>Technical Typography</h2>
+
+  <div class="grid">
+    <div class="grid__item one-half">
+      <h3>Rhythm</h3>
+    </div>
+
+    <div class="grid__item one-half">
+      <h3>Ratios</h3>
+    </div>
+  </div>
+
+  <aside class="notes">
+    <p>
+      Two sections of technical typography I want to talk about today are Rhythm and Ratios.
+    </p>
+  </aside>
+</section>
+
+
+<section>
+  <h2>Rhythm</h2>
+  <div class="rhythm-demo">
+  <div class="grid">
+    <div class="grid__item one-half">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.</p>
+
+      <p>Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur.</p>
+
+
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+    </div>
+    <div class="grid__item one-half">
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+      in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <h4>Dummy Text</h4>
+      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+      deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+      aliqua.</p>
+
+    </div>
+  </div>
+</div>
+
+
+  <aside class="notes">
+    <p>
+      Vertical Rhythm is the spacing as text flows down the page. At its base level it is how the line-height of your text repeats and create a familiar flow that feels comforting to the reader. Through careful use of spacing you can also set this up so that headings and other content that breaks up your continuous prose can fit into this rhythm without breaking it. Note how this heading appears in the middle of a block of prose but any paragraphs after it fall back into the same rhythm.
+    <br>
+      There is an ideal width to your text too. Ideally your the readers head and eyes shouldn't need to move while read, that effort while slight is repeated several times while reading and should be avoided if possible so the reader doesn't tire. The common wisdom for traditional books is to have a line be between 45 and 75 characters long, though research has shown that longer lines are just a readable on screen, probably due to how the distance between your eyes and a desktop monitor differs compared to a book or handheld electronic device.
+    </p>
+  </aside>
+</section>
+
+
+<section>
+  <h2>Line-Height</h2>
+
+  <ul>
+    <li>Usually between 1.2 and 1.8</li>
+    <li>Larger text needs a smaller line-height</li>
+    <li>Larger x-height needs a larger line-height</li>
+  </ul>
+
+  <aside class="notes">
+    <p>
+      So I've hinted that your line-height is the base value that all your other settings shall hang off of, so what should you set your line-height to? Well it depends. Setting it to 1 isn't appropriate as then the height of a line is equal to the size of characters in it so your text lines shall butt into the lines above and below, thus you need a bit of spacing. Values between 1.2 and 1.8 are common but this shall depend on a few things.
+    <br>
+      The size of your font is a factor - a larger font-size means you want your line-height ratio
+      to be a bit tighter, while you'll smaller text shall need a larger line-height to breath.
+    <br>
+      Also it depends on the font you've chosen too. Different fonts have different x-heights - the size of their lower case letters in relation to their upper case ones. Fonts that have a larger x-height feel larger overall so you'll need a larger line-height to give the letters room to breath and not feel cramped.
+    <br>
+      So that's a little bit around what to consider when picking that value, but your typography isn't just about one font size, you've got all those heading sizes to consider.
+    </p>
+  </aside>
+</section>
+
+<section>
+  <h2>Ratios</h2>
+
+  <h3>Ratios</h3>
+  <h4>Ratios</h4>
+
+  <aside class="notes">
+    <p>
+      Rather than struggling to pick out sizes for your sizing hierarchy you can cheat a little, and short-circuit that process by leveraging ratios, where each step in your sizing is a multiple of the prior value
+    </p>
+  </aside>
+</section>
+
+<section>
+  <h2>Modular Scale</h2>
+
+  <p>Base font-size: 16px. Ratio: 1:1.5</p>
+  <table>
+    <tr><th>Size</th><th>Calculated By</th></tr>
+    <tr><td>7.111px</td><td>10.667px / 1.5</td></tr>
+    <tr><td>10.667px</td><td>16px / 1.5</td></tr>
+    <tr><td>16px</td><td>-</td></tr>
+    <tr><td>24px</td><td>16px * 1.5</td></tr>
+    <tr><td>36px</td><td>24px * 1.5</td></tr>
+    <tr><td>54px</td><td>36px * 1.5</td></tr>
+  </table>
+
+  <aside class="notes">
+    <p>
+      Modular Scale is a method for generating a harmonious scale of numbers that work well together, based off a common ratio and a starting point
+    <br>
+      For instance if we pick a ratio of 1:1.5 then we end up with a sizing hierarchy that looks like this, where each size is given by the prior value multiplied by your ratio.
+    <br>
+      There is another way of expressing this trend though:
+    </p>
+  </aside>
+</section>
+
+<section>
+  <h2>Modular Scale</h2>
+
+  <p>Base font-size: 16px. Ratio: 1:1.5</p>
+  <table>
+    <tr><th>Size</th><th>Calculated By</th></tr>
+    <tr><td>7.111px</td><td>16px * (1.5 ^ -2)</td></tr>
+    <tr><td>10.667px</td><td>16px * (1.5 ^ -1)</td></tr>
+    <tr><td>16px</td><td>16px * (1.5 ^ 0)</td></tr>
+    <tr><td>24px</td><td>16px * (1.5 ^ 1)</td></tr>
+    <tr><td>36px</td><td>16px * (1.5 ^ 2)</td></tr>
+    <tr><td>54px</td><td>16px * (1.5 ^ 3)</td></tr>
+  </table>
+
+  <aside class="notes">
+    <p>
+      Using exponents gives us a slightly cleaner progression, your base size is 0 then the number of your step is the exponent that you raise your ratio to.
+    </p>
+  </aside>
+</section>
+
+<section>
+  <h2>Modular Scale</h2>
+ <div class="ms-demo">
+    <p class="ms-n2">7.111px - 16px * (1.5 ^ -2)</p>
+    <p class="ms-n1">10.667px - 16px * (1.5 ^ -1)</p>
+    <p class="ms-0">16px - 16px * (1.5 ^ 0)</p>
+    <p class="ms-1">24px - 16px * (1.5 ^ 1)</p>
+    <p class="ms-2">36px - 16px * (1.5 ^ 2)</p>
+    <p class="ms-3">54px - 16px * (1.5 ^ 3)</p>
+    <p class="ms-4">81px - 16px * (1.5 ^ 4)</p>
+  </div>
+</section>
+
+
+<section>
+  <h2>Bringing it all together</h2>
+
+  <p><a href="http://www.gridlover.net/try">GridLover.net</a></p>
+
+  <aside class="notes">
+    <p>This all works rather well, but it's a fair bit of maths. If only we had something to do all that computation for us. Oh wait, we do.</p>
+  </aside>
+</section>
+
+<section>
+  <h2>Sass</h2>
+
+  <aside class="notes">
+    <p>
+      Sass is a stylesheet preprocessor, it takes code written in its on language and outputs CSS
+    <br>
+      The neat thing about it is it's a strict superset of CSS. Which means that you can write the CSS you already know, and sprinkle in it's features like variables and functions when you need them.
+    <br>
+      You're not starting from scratch.
+    </p>
+  </aside>
+</section>
+
+
+<section>
+  <h2>Sassy Default Variables</h2>
+  <pre><code>
+    $base-font-size: 16px !default;
+    $base-line-height: 1.5 !default;
+    $ratio: 1.5 !default; // Perfect Fifth
+    $round-pixels: true !default;
+  </code></pre>
+
+  <aside class="notes">
+    <p>
+      First let's setup some default variables that we'll be using.
+    <br>
+    A base font-size, line-height and a ratio we want
+    </p>
+  </aside>
+</section>
+
+<section>
+  <h2>Sassy Vertical Rhythm</h2>
+  <pre><code>
+@function rhythm($multiplier: 1,
+                 $base-font-size: $base-font-size,
+                 $base-line-height: $base-line-height) {
+  @return $multiplier * $base-font-size * $base-line-height;
+}
+  </code></pre>
+
+  <aside class="notes">
+    <p>
+      Next we'll define a function we can can use for working out a multiple of our vertical rhythm for when we want to space things out.
+    <br>
+      The duplication of the font-size and line-height are so it knows to reference the global
+      variables we just set as the default values for those parameters.
+    <br>
+      So if i need a space that is equal to two lines of text i can get that using rhythm(2)
+    </p>
+  </aside>
+</section>
+
+
+<section>
+  <h2>Sassy Modular Scale</h2>
+
+  <pre><code>
+  @function modular-scale($offset,
+                          $base-font-size: $base-font-size,
+                          $ratio: $ratio,
+                          $round-pixels: $round-pixels) {
+  @if $round-pixels == true {
+    @return round($base-font-size * pow($ratio, $offset));
+  }
+
+  @return $base-font-size * pow($ratio, $offset);
+}
+  </code></pre>
+
+  <aside class="notes">
+    <p>
+      And finally we can create a modular-scale function that can be used to get a font size in our scale.
+    <br>
+      modular-scale(0) shall be our base font-size, modular-scale(1) shall be our next size up and so on.
+    <br>
+      Let's put our variables and functions to use.
+    </p>
+  </aside>
+</section>
+
+
+<section>
+  <h2>Sassy Basic Usage</h2>
+
+  <pre><code>
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  text-rendering: optimizeLegibility;
+}
+
+p, ul, ol {
+  margin: 0 0 rhythm(1) 0;
+}
+
+ul, ol {
+  padding-left: $base-font-size * 2.5;
+}
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>Sassy Headings</h2>
+  <pre><code>
+h1 {
+  font-size: modular-scale(3); // 16px * 1.5^3 = 54px
+  line-height: (rhythm(3) / modular-scale(3)); // 72px / 54px = 1.33
+}
+
+h2 {
+  font-size: modular-scale(2); // 16px * 1.5^2 = 36px
+  line-height: (rhythm(2) / modular-scale(2)); // 48px / 36px =1.33
+}
+
+h3 {
+  font-size: modular-scale(1); // 16px * 1.5^1 = 24px
+  line-height: (rhythm(2) / modular-scale(1)); // 48px / 24px = 2
+}
+  </code></pre>
+
+  <aside class="notes">
+    <p>
+      Reduced mental load as no maths is needed, just use rhythm multiples and
+      modular-scale points.
+    </p>
+  </aside>
+</section>
+
+<section>
+  <h2>Sassy Headings</h2>
+  <pre><code>
+h1 {
+  font-size: 54px;
+  line-height: 1.33333;
+}
+
+
+h2 {
+  font-size: 36px;
+  line-height: 1.33333;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 2;
+}
+  </code></pre>
+
+  <aside class="notes">
+    <p>
+      Reduced mental load as no maths is needed, just use rhythm multiples and
+      modular-scale points.
+    </p>
+  </aside>
+</section>
+
+<section>
+  <h2>Rems</h2>
+
+  <ul>
+    <li>Relative measurements</li>
+    <li>A better fit for responsive thinking</li>
+    <li>Progressive enhancement</li>
+  </ul>
+
+  <pre><code>
+html {
+  font-size: 16px;
+  font-size: 1rem;
+}
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>Sassy REMs</h2>
+  <pre><code>
+@mixin rem($property, $px-values, $baseline-px: $base-font-size) {
+  $baseline-rem: $baseline-px / 1rem;
+  $rem-values: ();
+
+  @each $value in $px-values {
+    $rem-values: append($rem-values,
+      if($value == 0, $value, $value / $baseline-rem));
+  }
+
+  #{$property}: $px-values;
+  #{$property}: $rem-values;
+}
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>Sassy Headings (Redux)</h2>
+
+  <pre><code>
+h1 {
+  @include rem('font-size', modular-scale(3));
+  line-height: (rhythm(3) / modular-scale(3));
+}
+
+h2 {
+  @include rem('font-size', modular-scale(2));
+  line-height: (rhythm(2) / modular-scale(2));
+}
+
+h3 {
+  @include rem('font-size', modular-scale(1));
+  line-height: (rhythm(2) / modular-scale(1));
+}
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>Sassy Headings (Redux)</h2>
+
+  <pre><code>
+h1 {
+  font-size: 54px;
+  font-size: 3.375rem;
+  line-height: 1.33333;
+}
+
+h2 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333;
+}
+
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+  </code></pre>
+</section>
+
+
+<section>
+  <h2>TL;DR</h2>
+
+  <ul>
+    <li>Universal guidelines exist</li>
+    <li>They're pretty easy to use</li>
+    <li>Computers are good at math</li>
+    <li>A designer's eye always wins</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Link Dump</h2>
+  <ul>
+    <li><a href="http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/#tt-ellipses">Technical Web Typography: Guidelines and Techniques</a></li>
+    <li><a href="http://alistapart.com/article/more-meaningful-typography">More Meaningful Typography</a></li>
+    <li><a href="http://ia.net/blog/the-web-is-all-about-typography-period/">Web Design is 95% Typography</a></li>
+    <li><a href="http://www.kaikkonendesign.fi/typography/section/1">Interactive Guide to Blog Typography</a></li>
+    <li><a href="http://www.gridlover.net/">Grid Lover</a></li>
+  </ul>
+</section>
+
+
+<section>
+  <h1>Thank You</h1>
+
+  <h3>Any Questions?</h3>
+  <p>
+    <small>Ben Scott / <a href="http://twitter.com/BPScott">@BPScott</a></small>
+  </p>
+
+    <p>
+    <small><a href="http://www.reload.me.uk/talk-typography-for-developers">reload.me.uk/talk-typography-for-developers</a></small>
+  </p>
+
+  <!-- TODO link to talk URL here-->
+</section>
+
+      </div>
+    </div>
+
+    <script src="reveal/lib/js/head.min.js" type="text/javascript"></script>
+    <script src="reveal/js/reveal.min.js" type="text/javascript"></script>
+
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: false,
+
+        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+/* line 38, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/demo.css.scss */
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility; }
+
+/* line 46, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/demo.css.scss */
+p, ul, ol {
+  margin: 0 0 24px 0; }
+
+/* line 51, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/demo.css.scss */
+ul, ol {
+  padding-left: 40px; }
+
+/* line 57, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/demo.css.scss */
+h1 {
+  font-size: 54px;
+  line-height: 1.33333; }
+
+/* line 63, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/demo.css.scss */
+h2 {
+  font-size: 36px;
+  line-height: 1.33333; }
+
+/* line 69, /Users/bens92/projects/talk-typography-for-developers/source/stylesheets/demo.css.scss */
+h3 {
+  font-size: 24px;
+  line-height: 2; }
